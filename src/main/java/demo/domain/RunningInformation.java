@@ -77,7 +77,7 @@ public class RunningInformation {
     }
 
     public RunningInformation(final String username, final String address){
-        this.userInfo = new UserInfo(this.id,username, address);
+        this.userInfo = new UserInfo(username, address);
     }
 
 

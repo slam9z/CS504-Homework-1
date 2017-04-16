@@ -1,0 +1,14 @@
+[
+    {
+    "runningId": "1232",
+    "latitude": "38.9093216",
+    "longitude": "-77.0036435",
+    "runningDistance": "-39492",
+    "totalRunningTime": "-2139.25",
+    "heartRate": 0,
+    "timestamp": "2017-04-01T18:50:35Z",
+    "userInfo": {
+        "username":"",
+        "address": "504 CS Street, Mountain View, CA 88888"
+    }
+}]

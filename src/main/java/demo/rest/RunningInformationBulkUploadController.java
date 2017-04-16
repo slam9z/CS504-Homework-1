@@ -37,7 +37,6 @@ public class RunningInformationBulkUploadController {
     @Autowired
     private RunningInformationAnalysisService informationAnalysisService;
 
-
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public void add(@Validated @RequestBody List<RunningInformation> runningInformations){
@@ -72,7 +71,7 @@ public class RunningInformationBulkUploadController {
     }
 
     @RequestMapping(value = "/purge",method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void purge(){
         this.informationAnalysisService.deleteAll();
     }

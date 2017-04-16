@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -24,11 +25,12 @@ public class UserInfo {
     @JsonIgnore
     private Long id;
 
-    @NotNull(message = "error.general.notnull")
+    @NotEmpty(message = "error.general.notnull")
     private final String username;
 
-    @NotNull(message = "error.general.notnull")
+    @NotEmpty(message = "error.general.notnull")
     private final String address;
+
 
     public UserInfo(){
         this.username = "";
@@ -36,11 +38,11 @@ public class UserInfo {
     }
 
     public UserInfo(
-       Long id,
+       //Long id,
        @JsonProperty("username") String username,
        @JsonProperty("address")String address
     ){
-        this.id = id;
+        //this.id = id;
         this.username = username;
         this.address = address;
     }
