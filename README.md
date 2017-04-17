@@ -39,7 +39,7 @@ cd CS504-Homework-1
 
 #### Start MySQL Docker
 ```Bash
-docker-compose up -d
+$ docker-compose up -d
 ```
 #### Login database and query data
  ```Bash
@@ -52,18 +52,18 @@ mysql> select * from private;
  ```
 #### Create Database - if not existed
 ```Bash
-sh run_DB_CS504_Homework_1.sh
+$ sh run_DB_CS504_Homework_1.sh
 ```
 
 #### Install the project dependencies
 ```Bash
-cd CS504-Homework-1
-mvn clean install
+$ cd CS504-Homework-1
+$ mvn clean install
 ```
 
 #### Run the application 
 ```Bash
-mvn spring-boot:run
+$ mvn spring-boot:run
 ```
 
 #### Run with Postman
@@ -76,52 +76,19 @@ mvn spring-boot:run
 | `http://localhost:9000/api/runningInformations/listedBy`| GET | List all runnning information [Orderby HealthWarningLevel from high to low]|
 | `http://localhost:9000/api/runningInformations/listedBy?page=0&size=3`| GET | List all runnning information [Orderby user customize parameter] |
 | `http://localhost:9000/api/runningInformations/id/{id}`| GET | Retrieve the running information by id |
-```
-#Open browser and enter 
-
-http://localhost:9000/api/runningInformations/add    
-
-http://localhost:9000/api/runningInformations/deleteByRunningId/{runningId}
-
-http://localhost:9000/api/runningInformations/purge
-
-http://localhost:9000/api/runningInformations/listedBy
-
-http://localhost:9000/api/runningInformations/listedBy?page=0&size=3
-
-http://localhost:9000/api/runningInformations/id/{id}
-```
 
 #### Run without Postman:
-```
+```Bash
 #Navigate to project directory
-cd CS504-Homework-1
-
-#help command
-sh run_CS504_Homework_1.sh -h
-
-#add bulk of runninginformation by JSON input: running-informations-data.json 
-#the inputs for filename and filepath are not dynamic, will be improve in the future
-sh run_CS504_Homework_1.sh -c 
-
-#list all the running information
-sh run_CS504_Homework_1.sh -ls
-
-#list all the running information by page,size,sort
-sh run_CS504_Homework_1.sh -ls --page 1 --size 3 --sortBy runningId --sortDir ASC
-
-#list by id
-sh run_CS504_Homework_1.sh -f <id>
-
-#delete by runningId
-sh run_CS504_Homework_1.sh -d <runningId>
-
-#delete all
-sh run_CS504_Homework_1.sh -p
-
+$ cd CS504-Homework-1
 ```
 
-
-
-
-
+| Command                                    | Status    | Description                                                            |
+| ---------------------------------------| ------- | ---------------------------------------------------------------------- |
+| `$ sh run_CS504_Homework_1.sh -h`|       | help  |
+| `$ sh run_CS504_Homework_1.sh -c`| POST  | add bulk of runninginformations by JSON input: running-informations-data.json |
+| `$ sh run_CS504_Homework_1.sh -d <runningId>`| DELETE | Delete a RunningInformation by runningId          |
+| `$ sh run_CS504_Homework_1.sh -p`| DELETE  | Delete all running Informations                          |
+| `$ sh run_CS504_Homework_1.sh -ls`| GET | List all runnning information [Orderby HealthWarningLevel from high to low]|
+| `$ sh run_CS504_Homework_1.sh -ls --page 1 --size 3 --sortBy runningId --sortDir ASC`| GET | List all runnning information [Orderby user customize parameter] |
+| `sh run_CS504_Homework_1.sh -f <id>`| GET | Retrieve the running information by id |
