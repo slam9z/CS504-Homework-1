@@ -2,7 +2,7 @@
 This REST API is designing and collaborating with the Runner Tracking Application. The API is used for tracking a specific runner's running information such as their running distance, duration, heart rate, location (lat/long) etc..  
 
 ## Requirements
-* Please check the ![Requirement.md](./Project_Log/Requirement.md) for more detail 
+* Please check the [Requirement.md](./Project_Log/Requirement.md) for more detail 
 ##### Features Summary
 * Add one or more Running Information  
 * Delete By RunningId
@@ -12,7 +12,7 @@ This REST API is designing and collaborating with the Runner Tracking Applicatio
     2. RunningDistance: should be positive number
     3. RunningId: should be a valid UUID/GUID format
 
-#### Technologies:
+#### Development:
 ![Based on](./Project_Log/images/SpringBoot_Rest_docker.png)
 - Language: Java 1.8
 - Framework: SpringBoot
@@ -80,12 +80,12 @@ http://localhost:9000/api/runningInformations/listedBy?page=0&size=3
 http://localhost:9000/api/runningInformations/id/{id}
 ```
 
-#### Run without Postman -> open a new terminal:
+#### Run without Postman:
 ```
+#Navigate to project directory
 cd CS504-Homework-1
 
 #help command
-
 sh run_CS504_Homework_1.sh -h
 
 #add bulk of runninginformation by JSON input: running-information-data.json
