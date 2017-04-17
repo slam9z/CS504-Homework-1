@@ -67,10 +67,19 @@ mvn spring-boot:run
 ```
 
 #### Run with Postman
+
+| URL                                    | Status    | Description                                                            |
+| ---------------------------------------| ------- | ---------------------------------------------------------------------- |
+| `http://localhost:9000/api/runningInformations/add`| POST  | add bulk of runninginformations -> copy and paste the JSON data into Bidy         |
+| `http://localhost:9000/api/runningInformations/deleteByRunningId/{runningId}`| DELETE | Delete a RunningInformation by runningId          |
+| `http://localhost:9000/api/runningInformations/purge`| DELETE  | Delete all running Informations                          |
+| `http://localhost:9000/api/runningInformations/listedBy`| GET | List all runnning information [Orderby HealthWarningLevel from high to low]|
+| `http://localhost:9000/api/runningInformations/listedBy?page=0&size=3`| GET | List all runnning information [Orderby user customize parameter] |
+| `http://localhost:9000/api/runningInformations/id/{id}`| GET | Retrieve the running information by id |
 ```
 #Open browser and enter 
 
-http://localhost:9000/api/runningInformations/add    copy and paste the json file in Response Body
+http://localhost:9000/api/runningInformations/add    
 
 http://localhost:9000/api/runningInformations/deleteByRunningId/{runningId}
 
