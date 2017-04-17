@@ -11,9 +11,6 @@ CREATE DATABASE IF NOT EXISTS running_information_analysis_service_db;
 #show MySQL
 show databases;
 
-#quit mySQL
-
-
 MYSQL_SCRIPT
 echo "==========================================================================="
 printf "Database schema created...\n"
