@@ -1,9 +1,9 @@
 # Running-Information-Analysis-Service REST API
 This REST API is designing and collaborating with the Runner Tracking Application. The API is used for tracking a specific runner's running information such as their running distance, duration, heart rate, location (lat/long) etc..  
 
-##Requirements
-* Please check the Requirement.md for more detail 
-#####Features Summary
+## Requirements
+* Please check the ![Requirement.md](./Project_Log/Requirement.md) for more detail 
+##### Features Summary
 * Add one or more Running Information  
 * Delete By RunningId
 * List all the running information by Health Warning Level, but not limit to other filter categories.
@@ -12,8 +12,8 @@ This REST API is designing and collaborating with the Runner Tracking Applicatio
     2. RunningDistance: should be positive number
     3. RunningId: should be a valid UUID/GUID format
 
-Technologies:
-[Based on](./Project_Log/images/SpringBoot_Rest_docker.png)
+#### Technologies:
+![Based on](./Project_Log/images/SpringBoot_Rest_docker.png)
 - Language: Java 1.8
 - Framework: SpringBoot
     * Spring Data JPA
@@ -22,22 +22,23 @@ Technologies:
 - Container Engine: Docker
 - Build Tool: Maven
 - Server Port: 9000
-##Getting started
 
-###Clone the repository
+## Getting started
+
+#### Clone the repository
 ```Bash
 $ git clone https://github.com/slam9z/CS504-Homework-1.git
 ```
-###Get into the project folder
+#### Get into the project folder
 ```Bash
 cd CS504-Homework-1
 ```
 
-###Start MySQL Docker
+#### Start MySQL Docker
 ```Bash
 docker-compose up -d
 ```
-###Login database and query data
+#### Login database and query data
  ```Bash
 mysql --host=127.0.0.1 --port=3306 --user=root --password=root
  
@@ -46,23 +47,23 @@ mysql> use running_information_analysis_db;
 mysql> select * from private;
  
  ```
-###Create Database - if not existed
+#### Create Database - if not existed
 ```Bash
 sh run_DB_CS504_Homework_1.sh
 ```
 
-###Install the project dependencies
+#### Install the project dependencies
 ```Bash
 cd CS504-Homework-1
 mvn clean install
 ```
 
-###Run the application 
+#### Run the application 
 ```Bash
 mvn spring-boot:run
 ```
 
-### Run with Postman
+#### Run with Postman
 ```
 #Open browser and enter 
 
@@ -79,7 +80,7 @@ http://localhost:9000/api/runningInformations/listedBy?page=0&size=3
 http://localhost:9000/api/runningInformations/id/{id}
 ```
 
-###Run without Postman -> open a new terminal:
+#### Run without Postman -> open a new terminal:
 ```
 cd CS504-Homework-1
 
