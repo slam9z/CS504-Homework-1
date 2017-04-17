@@ -74,34 +74,34 @@ while test $# -gt 0; do
                                 --page)
                                     shift
                                     if test $# -gt 0; then
-                                       params=${params}"page="$1"&"
+                                       params="${params}page=$1&"
                                     fi
                                     shift
                                     ;;
                                 --size)
                                     shift
                                     if test $# -gt 0; then
-                                       params=${params}"size="$1"&"
+                                       params="${params}size=$1&"
                                     fi
                                     shift
                                     ;;
                                 --sortDir)
                                     shift
                                     if test $# -gt 0; then
-                                       params=${params}"sortDir="$1"&"
+                                       params="${params}sortDir=$1&"
                                     fi
                                     shift
                                     ;;
                                 --sortBy)
                                     shift
                                     if test $# -gt 0; then
-                                       params=${params}"sortBy="$1"&"
+                                       params="${params}sortBy=$1&"
                                     fi
                                     shift
                                     ;;
                             esac
                         done
-                        echo ${params%?}
+                        #echo ${params%?}
                         curl -v -H "Accept:application/json" localhost:9000/api/runningInformations/listedBy${params%?} | python -m json.tool
 
                         ;;
