@@ -6,25 +6,25 @@ This REST API is designing and collaborating with the Runner Tracking Applicatio
 
 ## Requirements
 * Please check the [Requirement.md](./Project_Log/Requirement.md) for more detail 
-##### Features Summary
-* Add one or more Running Information  
-* Delete By RunningId
-* List all the running information by Health Warning Level, but not limit to other filter categories.
-* Basic Data Validation for fields:
-    1. TotalRunning: should be positive number
-    2. RunningDistance: should be positive number
-    3. RunningId: should be a valid UUID/GUID format
+    ##### Features Summary
+    * Add one or more Running Information  
+    * Delete By RunningId
+    * List all the running information by Health Warning Level, but not limit to other filter categories.
+    * Basic Data Validation for fields:
+        1. TotalRunning: should be positive number
+        2. RunningDistance: should be positive number
+        3. RunningId: should be a valid UUID/GUID format
 
-#### Development:
+## Development Env:
 ![Based on](./Project_Log/images/SpringBoot_Rest_docker.png)
-- Language: Java 1.8
-- Framework: SpringBoot
+- *Language:* Java 1.8
+- *Framework:* SpringBoot
     * Spring Data JPA
     * Spring Data Rest
-- Database: MySQL
-- Container Engine: Docker
-- Build Tool: Maven
-- Server Port: 9000
+- *Database:* MySQL
+- *Container Engine:* Docker
+- *Build Tool:* Maven
+- *Server Port:* 9000
 
 ## Getting started
 
