@@ -91,7 +91,7 @@ cd CS504-Homework-1
 sh run_CS504_Homework_1.sh -h
 
 #add bulk of runninginformation by JSON input: running-informations-data.json 
-#the alternate filename and filepath are fix variable, will be improve in the future for user free input
+#the inputs for filename and filepath are not dynamic, will be improve in the future
 sh run_CS504_Homework_1.sh -c 
 
 #list all the running information
