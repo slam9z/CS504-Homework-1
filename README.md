@@ -1,4 +1,7 @@
 # Running-Information-Analysis-Service REST API
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6bb7b07e21fe4096a506266d3b6f6b2c)](https://www.codacy.com/app/slam9z/CS504-Homework-1?utm_source=github.com&utm_medium=referral&utm_content=slam9z/CS504-Homework-1&utm_campaign=badger)
+
 This REST API is designing and collaborating with the Runner Tracking Application. The API is used for tracking a specific runner's running information such as their running distance, duration, heart rate, location (lat/long) etc..  
 
 ## Requirements
